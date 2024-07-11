@@ -6,6 +6,7 @@
   font-family: "Karla", sans-serif;
 }
 
+
 #root {
   width: 100%;
   box-sizing: border-box;
@@ -48,213 +49,198 @@ header {
 .lists ul a::after {
   content: "";
   background-color: orange;
-  height: 2px;
+  height: 3px;
+  width: 0;
+  margin-top: 3px;
   display: block;
-  transition: 0.5s;
+  transition: 0.4s ease;
+  border-radius: 40px;
 }
 .lists ul a:hover::after {
   width: 100%;
 }
-.lists ul a:hover {
-  color: orange;
-}
-.lists ul i {
-  display: none;
-}
-.fa-bars {
-  cursor: pointer;
-}
-.open {
-  display: flex !important;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #0b0b0c;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.close {
-  display: none !important;
-}
-
 .hereo-section {
-  height: 100vh;
-  background: url('./hero-image.jpg') no-repeat center center/cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url(./images/logo.jpg)
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
 }
 .banner-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 50px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.593);
+  height: 100%;
   color: white;
-}
-.banner-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.about-section {
-  padding: 60px 40px;
-  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
 }
 .abt-heading {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 24px;
   text-align: center;
+  font-size: 46px;
 }
-.abt-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.programs-section {
-  padding: 60px 40px;
-  background-color: #0b0b0c;
-  color: white;
-}
-.prgram-overlay {
-  max-width: 800px;
-  margin: auto;
-}
-.prgram-overlay ul {
-  list-style: none;
-}
-.prgram-overlay li {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+.about-section {
+  width: 100%;
+  padding: 20px;
 }
 
-.admission-block {
-  padding: 60px 40px;
-  background-color: #f4f4f4;
+.abt-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.abt-text div {
+  padding: 20px;
+  height: 200px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.4 ease;
+}
+.abt-text div:hover {
+  background-color: #f7f7f7;
+}
+.head {
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+.abt-text div:hover .head {
+  color: orange;
+}
+.programs-section {
+  background: url(https://lh3.googleusercontent.com/proxy/OQtv0kLpX1TXlaChVb7qyq60CBLCbQ39Jl_Za48WC1zXv-l9oBSAgZweWs6fhKgyu7mHv3_YgHvbOFYfTaXE5ePuKgxFwxV-Kaw6SxDswcf-OjxYg6RBuPJiiq51Mg5vus9UHy-55xYqhctyN0DAzwAQIH3e2Ro)
+    fixed;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.prgram-overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.593);
+  color: white;
+  padding: 40px;
+}
+
+.prgram-overlay ul li {
+  margin-top: 24px;
+}
+.admission-text {
   text-align: center;
-}
-.admission-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.admission-text p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  padding: 24px;
 }
 .block {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  gap: 16px;
+  margin-top: 1rem;
+  padding: 20px;
 }
 .admission {
-  flex: 1;
-  min-width: 250px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.admission span.head {
-  font-weight: bold;
-}
-
-.subjects-section {
-  padding: 60px 40px;
-  background-color: #fff;
-}
-.subjects-heading {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.subjects-list {
+  background-color: #f7f7f7;
+  padding: 24px;
+  border-radius: 6px;
+  height: 200px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  align-items: center;
 }
-.subject-card {
-  flex: 1 1 calc(33.333% - 2rem);
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-.subject-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
 footer {
   background-color: #0b0b0c;
-  padding: 40px;
   color: white;
+  padding: 30px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 footer ul {
   list-style: none;
-  padding: 0;
-}
-footer ul h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-footer ul li {
-  margin-bottom: 0.5rem;
-}
-footer .socials {
-  display: flex;
-  gap: 1rem;
-}
-footer .socials a {
-  color: white;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-footer .socials a:hover {
-  color: orange;
-}
-footer p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-footer p a {
-  color: white;
-  text-decoration: underline;
-}
-footer p a:hover {
-  color: orange;
 }
 
-@media (max-width: 768px) {
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.fa-times,
+.fa-bars {
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 731px) {
   .lists ul {
-    display: none;
-  }
-  .lists ul.open {
-    display: flex;
-  }
-  .lists ul i {
     display: block;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    color: black;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  .brand {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .listing.open {
+    padding: 30px;
+    padding-top: 90px;
+    width: 50%;
+  }
+  .lists ul a {
+    color: black;
+    font-size: 24px;
+  }
+  .fa-bars {
+    display: inline-block;
+  }
+  .fa-times {
+    display: inline-block;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 20px;
   }
-  .hereo-section {
-    height: 50vh;
+  .abt-text div {
+    width: 100%;
   }
-  .banner-overlay h1 {
-    font-size: 2rem;
+  .admission {
+    width: 100%;
   }
-  .abt-text {
-    flex-direction: column;
-  }
-  .admission-block {
-    text-align: left;
+  .block {
+    flex-wrap: wrap;
   }
 }
+
+@media (max-width: 619px) {
+  footer {
+    flex-wrap: wrap;
+  }
+  .listing.open {
+    padding: 30px;
+    padding-top: 90px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 451px) {
+  .hereo-section {
+    height: auto;
+  }
+  .banner-overlay {
+    padding-top: 10rem;
+    padding-bottom: 20px;
+  }
+}
+
