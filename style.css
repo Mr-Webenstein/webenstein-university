@@ -48,166 +48,213 @@ header {
 .lists ul a::after {
   content: "";
   background-color: orange;
-  height: 3px;
-  width: 0;
-  margin-top: 3px;
+  height: 2px;
   display: block;
-  transition: 0.4s ease;
-  border-radius: 40px;
+  transition: 0.5s;
 }
 .lists ul a:hover::after {
   width: 100%;
 }
-.hereo-section {
-  background: url(./images/logo.jpg)
-    fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 120vh;
+.lists ul a:hover {
+  color: orange;
 }
-.banner-overlay {
-  background-color: rgba(0, 0, 0, 0.593);
-  height: 100%;
+.lists ul i {
+  display: none;
+}
+.fa-bars {
+  cursor: pointer;
+}
+.open {
+  display: flex !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0b0b0c;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.close {
+  display: none !important;
+}
+
+.hereo-section {
+  height: 100vh;
+  background: url('./hero-image.jpg') no-repeat center center/cover;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  text-align: center;
   color: white;
-  text-align: center;
-  padding: 0 20px;
 }
-.hereo-section h1 {
+.banner-overlay h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
-
 .about-section {
-  padding: 40px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
+  padding: 60px 40px;
+  background-color: #f4f4f4;
 }
 .abt-heading {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 .abt-text {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 2rem;
 }
-.abt-text div {
-  flex: 1;
-  min-width: 250px;
-}
-.abt-text .head {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .programs-section {
-  padding: 40px 20px;
-  background-color: #333;
+  padding: 60px 40px;
+  background-color: #0b0b0c;
   color: white;
+}
+.prgram-overlay {
+  max-width: 800px;
+  margin: auto;
 }
 .prgram-overlay ul {
   list-style: none;
-  padding: 0;
 }
 .prgram-overlay li {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.subjects-section {
-  padding: 40px 20px;
-  background-color: #f1f1f1;
-  text-align: center;
-}
-.subjects-heading {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.subjects-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.subject-card {
-  flex: 1;
-  min-width: 150px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .admission-block {
-  padding: 40px 20px;
-  background-color: #fff;
+  padding: 60px 40px;
+  background-color: #f4f4f4;
   text-align: center;
 }
 .admission-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 .admission-text p {
-  margin-bottom: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
-.admission-block .block {
+.block {
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
 }
 .admission {
   flex: 1;
   min-width: 250px;
+  background-color: white;
   padding: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.admission .head {
+.admission span.head {
   font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
+}
+
+.subjects-section {
+  padding: 60px 40px;
+  background-color: #fff;
+}
+.subjects-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.subjects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.subject-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.subject-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  padding: 20px;
   background-color: #0b0b0c;
+  padding: 40px;
   color: white;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 footer ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 footer ul h3 {
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 footer .socials {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 1rem;
 }
 footer .socials a {
   color: white;
   font-size: 1.5rem;
-  text-decoration: none;
+  transition: color 0.3s;
+}
+footer .socials a:hover {
+  color: orange;
 }
 footer p {
-  margin-top: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 footer p a {
-  color: orange;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
 }
 footer p a:hover {
-  text-decoration: underline;
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  .lists ul {
+    display: none;
+  }
+  .lists ul.open {
+    display: flex;
+  }
+  .lists ul i {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .hereo-section {
+    height: 50vh;
+  }
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+  .abt-text {
+    flex-direction: column;
+  }
+  .admission-block {
+    text-align: left;
+  }
 }
