@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     background: #333;
     color: #fff;
@@ -12,34 +13,42 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-brand {
     display: flex;
     align-items: center;
 }
+
 .nav-brand h1 {
     margin: 0;
     font-size: 1.5rem;
 }
-.nav .fa-bars, .nav .fa-times {
+
+.nav .fa-bars,
+.nav .fa-times {
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: 1rem;
     display: none;
 }
+
 .listing {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
+
 .listing a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background 0.3s;
 }
+
 .listing a:hover {
     background: #555;
 }
+
 .hero-section {
     background: url('your-image.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -49,77 +58,141 @@ header {
     color: #fff;
     text-align: center;
 }
+
 .banner-overlay {
     background: rgba(0, 0, 0, 0.5);
     padding: 2rem;
     border-radius: 8px;
     animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
-.about-section, .container, .admission-block, footer {
+
+.about-section,
+.container,
+.admission-block,
+footer {
     padding: 2rem;
     max-width: 1200px;
     margin: auto;
 }
+
 .abt-heading {
     text-align: center;
     margin-bottom: 2rem;
 }
-.abt-text, .course-list, .admission-block .block {
+
+.abt-text,
+.course-list,
+.admission-block .block {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
-.abt-text div, .course, .admission {
+
+.abt-text div,
+.course,
+.admission {
     flex: 1 1 calc(33.333% - 2rem);
     padding: 1rem;
     background: #f9f9f9;
     border-radius: 8px;
 }
+
 .course-list .course {
     text-align: center;
 }
+
 .admission-block .admission {
-    flex: 1 1 100%;
+    margin-bottom: 1rem;
 }
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: left;
+ welche verwendet Mein contain contain wanted invitation
+.footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: left;
 }
-footer ul {
-    list-style: none;
+
+.footer ul {
+    list-style-type: none;
     padding: 0;
 }
-footer a {
-    color: #fff;
-    text-decoration: none;
+
+.footer ul li {
+    margin-bottom: 10px;
 }
-footer .socials a {
-    margin: 0 0.5rem;
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.socials a {
+    color: white;
+    text-decoration: none;
     font-size: 1.5rem;
 }
+
+.socials a:hover {
+    opacity: 0.7;
+}
+
+.socials i {
+    transition: opacity 0.3s ease-in-out;
+}
+
 @media (max-width: 768px) {
-    .nav .fa-bars, .nav .fa-times {
+    .nav .fa-bars {
         display: block;
     }
-    .listing {
-        display: none;
-        flex-direction: column;
+    .lists {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100%;
         background: #333;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        transition: 0.5s;
+        z-index: 2;
+    }
+    .lists.active {
+        right: 0;
+    }
+    .listing {
+        display: block;
+        text-align: center;
+        margin: 50px 0;
+    }
+    .listing li {
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    .listing li a {
+        font-size: 20px;
+        color: #fff;
+    }
+    .banner-overlay {
         padding: 1rem;
     }
-    .listing.open {
-        display: flex;
-    }
-    .abt-text div, .course, .admission {
-        flex: 1 1 100%;
+    .abt-text div,
+    .course,
+    .admission {
+        flex: 1 1 calc(100% - 2rem);
     }
 }
