@@ -1,198 +1,303 @@
-body {
-    font-family: 'Karla', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+
+#root {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #0b0b0c;
+  padding: 24px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #fff;
+}
 .nav-brand {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
-.nav-brand h1 {
-    margin: 0;
-    font-size: 1.5rem;
+.nav-brand i {
+  font-size: 28px;
 }
-
-.nav .fa-bars,
-.nav .fa-times {
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    display: none;
+.lists ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
 }
-
-.listing {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.lists ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
 }
-
-.listing a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
+.lists ul a::after {
+  content: "";
+  background-color: orange;
+  height: 3px;
+  width: 0;
+  margin-top: 3px;
+  display: block;
+  transition: 0.4s ease;
+  border-radius: 40px;
 }
-
-.listing a:hover {
-    background: #555;
+.lists ul a:hover::after {
+  width: 100%;
 }
-
-.hero-section {
-    background: url('your-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
+.hereo-section {
+  background: url(./logo.jpg)
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
 }
-
 .banner-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 8px;
-    animation: fadeIn 2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.593);
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.about-section,
-.container,
-.admission-block,
-footer {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-}
-
 .abt-heading {
-    text-align: center;
-    margin-bottom: 2rem;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 46px;
+}
+.about-section {
+  width: 100%;
+  padding: 20px;
 }
 
-.abt-text,
-.course-list,
-.admission-block .block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.abt-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.abt-text div {
+  padding: 20px;
+  height: 200px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.4 ease;
+}
+.abt-text div:hover {
+  background-color: #f7f7f7;
+}
+.head {
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+.abt-text div:hover .head {
+  color: orange;
+}
+.programs-section {
+  background: url(https://lh3.googleusercontent.com/proxy/OQtv0kLpX1TXlaChVb7qyq60CBLCbQ39Jl_Za48WC1zXv-l9oBSAgZweWs6fhKgyu7mHv3_YgHvbOFYfTaXE5ePuKgxFwxV-Kaw6SxDswcf-OjxYg6RBuPJiiq51Mg5vus9UHy-55xYqhctyN0DAzwAQIH3e2Ro)
+    fixed;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.prgram-overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.593);
+  color: white;
+  padding: 40px;
 }
 
-.abt-text div,
-.course,
+.prgram-overlay ul li {
+  margin-top: 24px;
+}
+.admission-text {
+  text-align: center;
+  padding: 24px;
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1rem;
+  padding: 20px;
+}
 .admission {
-    flex: 1 1 calc(33.333% - 2rem);
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 24px;
+  border-radius: 6px;
+  height: 200px;
+  display: flex;
+  align-items: center;
 }
-
-.course-list .course {
-    text-align: center;
+footer {
+  background-color: #0b0b0c;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
-
-.admission-block .admission {
-    margin-bottom: 1rem;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: left;
- welche verwendet Mein contain contain wanted invitation
-.footer {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: left;
-}
-
-.footer ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin-bottom: 10px;
+footer ul {
+  list-style: none;
 }
 
 .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.fa-times,
+.fa-bars {
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 731px) {
+  .lists ul {
+    display: block;
+    position: fixed;
+    z-index: 4;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    color: black;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  .brand {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .listing.open {
+    padding: 30px;
+    padding-top: 90px;
+    width: 50%;
+  }
+  .lists ul a {
+    color: black;
+    font-size: 24px;
+  }
+  .fa-bars {
+    display: inline-block;
+  }
+  .fa-times {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+  .abt-text div {
+    width: 100%;
+  }
+  .admission {
+    width: 100%;
+  }
+  .block {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 619px) {
+  footer {
+    flex-wrap: wrap;
+  }
+  .listing.open {
+    padding: 30px;
+    padding-top: 90px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 451px) {
+  .hereo-section {
+    height: auto;
+  }
+  .banner-overlay {
+    padding-top: 10rem;
+    padding-bottom: 20px;
+  }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.socials a {
-    color: white;
-    text-decoration: none;
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.header h1 span {
+    color: #ff4081;
+}
+
+.header .view-all {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.course {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course h2 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.socials a:hover {
-    opacity: 0.7;
-}
-
-.socials i {
-    transition: opacity 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-    .nav .fa-bars {
-        display: block;
-    }
-    .lists {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100%;
-        background: #333;
-        transition: 0.5s;
-        z-index: 2;
-    }
-    .lists.active {
-        right: 0;
-    }
-    .listing {
-        display: block;
-        text-align: center;
-        margin: 50px 0;
-    }
-    .listing li {
-        margin-right: 50px;
-        margin-bottom: 30px;
-    }
-    .listing li a {
-        font-size: 20px;
-        color: #fff;
-    }
-    .banner-overlay {
-        padding: 1rem;
-    }
-    .abt-text div,
-    .course,
-    .admission {
-        flex: 1 1 calc(100% - 2rem);
-    }
+.course p {
+    font-size: 1rem;
+    color: #777;
 }
