@@ -6,6 +6,7 @@
   font-family: "Karla", sans-serif;
 }
 
+
 #root {
   width: 100%;
   box-sizing: border-box;
@@ -26,30 +27,25 @@ header {
   width: 100%;
   color: #fff;
 }
-
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .nav-brand i {
   font-size: 28px;
 }
-
 .lists ul {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 1.5rem;
 }
-
 .lists ul a {
   text-decoration: none;
   color: white;
   font-weight: 400;
 }
-
 .lists ul a::after {
   content: "";
   background-color: orange;
@@ -60,22 +56,18 @@ header {
   transition: 0.4s ease;
   border-radius: 40px;
 }
-
 .lists ul a:hover::after {
   width: 100%;
 }
-
 .hereo-section {
-  background: url(./images/logo.jpg) fixed;
+  background: url(./images/logo.jpg)
+    fixed;
   background-size: cover;
   background-repeat: no-repeat;
   height: 120vh;
 }
-
 .banner-overlay {
   background-color: rgba(0, 0, 0, 0.593);
-  height: 100%;
-.banner-overlay {
   height: 100%;
   color: white;
   text-align: center;
@@ -83,13 +75,11 @@ header {
   display: flex;
   align-items: center;
 }
-
 .abt-heading {
   margin-top: 24px;
   text-align: center;
   font-size: 46px;
 }
-
 .about-section {
   width: 100%;
   padding: 20px;
@@ -103,7 +93,6 @@ header {
   margin-top: 2rem;
   gap: 1rem;
 }
-
 .abt-text div {
   padding: 20px;
   height: 200px;
@@ -112,20 +101,16 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: 0.4 ease;
 }
-
 .abt-text div:hover {
   background-color: #f7f7f7;
 }
-
 .head {
   transition: 0.4s ease;
   font-weight: bold;
 }
-
 .abt-text div:hover .head {
   color: orange;
 }
-
 .programs-section {
   background: url(https://lh3.googleusercontent.com/proxy/OQtv0kLpX1TXlaChVb7qyq60CBLCbQ39Jl_Za48WC1zXv-l9oBSAgZweWs6fhKgyu7mHv3_YgHvbOFYfTaXE5ePuKgxFwxV-Kaw6SxDswcf-OjxYg6RBuPJiiq51Mg5vus9UHy-55xYqhctyN0DAzwAQIH3e2Ro)
     fixed;
@@ -134,7 +119,6 @@ header {
   background-position: center;
   background-size: cover;
 }
-
 .prgram-overlay {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.593);
@@ -145,12 +129,10 @@ header {
 .prgram-overlay ul li {
   margin-top: 24px;
 }
-
 .admission-text {
   text-align: center;
   padding: 24px;
 }
-
 .block {
   display: flex;
   align-items: center;
@@ -159,7 +141,6 @@ header {
   margin-top: 1rem;
   padding: 20px;
 }
-
 .admission {
   background-color: #f7f7f7;
   padding: 24px;
@@ -168,7 +149,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 footer {
   background-color: #0b0b0c;
   color: white;
@@ -178,7 +158,6 @@ footer {
   align-items: center;
   gap: 3rem;
 }
-
 footer ul {
   list-style: none;
 }
@@ -265,51 +244,3 @@ footer ul {
   }
 }
 
-/* Popular Subjects Section */
-.subjects-section {
-  padding: 40px 0;
-  text-align: center;
-}
-
-.subjects-section h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.subjects-section h1 span {
-  color: orange;
-}
-
-.subjects-section button {
-  padding: 10px 20px;
-  background-color: orange;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.subjects-section button:hover {
-  background-color: darkorange;
-}
-
-.subjects-section .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.subjects-section .card {
-  background-color: #f7f7f7;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.subjects-section .card:hover {
-  background-color: #f0f0f0;
-}
